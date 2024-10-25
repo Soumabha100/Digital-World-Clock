@@ -1,17 +1,17 @@
 let newHours = 0;
 let newMinutes = 0;
 let intervalID;
-let backgroundImage = '/Images/IST1.png';
+let backgroundImage = 'Images/IST1.png';
 
 //Preloading the images before loading the website
 const images = [
-    '/Images/IST1.png',
-    '/Images/UTC3.png',
-    '/Images/EST2.png',
-    '/Images/PST1.png',
-    '/Images/CET1.png',
-    '/Images/AEST1.jpg',
-    '/Images/JST1.png',
+    'Images/IST1.png',
+    'Images/UTC3.png',
+    'Images/EST2.png',
+    'Images/PST1.png',
+    'Images/CET1.png',
+    'Images/AEST1.jpg',
+    'Images/JST1.png',
 ];
 
 images.forEach((image) => {
@@ -22,33 +22,33 @@ images.forEach((image) => {
 // Function to Update the current city the user has selected.
 function updateCity() {
     let currentCity = document.getElementById("citySelect");
-    let newBackgroundImage = '/Images/IST1.png';
+    let newBackgroundImage = 'Images/IST1.png';
 
     switch (currentCity.value) {
         case "IST": newHours = 0; newMinutes = 0;
-        newBackgroundImage = '/Images/IST1.png';
+        newBackgroundImage = 'Images/IST1.png';
             break;
         case "UTC": newHours = -5; newMinutes = -30;
-        newBackgroundImage = '/Images/UTC3.png';
+        newBackgroundImage = 'Images/UTC3.png';
             break;
         case "EST": newHours = -10; newMinutes = -30;
-        newBackgroundImage = '/Images/EST2.png';
+        newBackgroundImage = 'Images/EST2.png';
             break;
         case "PST": newHours = -13; newMinutes = -30;
-        newBackgroundImage = '/Images/PST1.png';
+        newBackgroundImage = 'Images/PST1.png';
             break;
         case "CET": newHours = -4; newMinutes = 30;
-        newBackgroundImage = '/Images/CET1.png';
+        newBackgroundImage = 'Images/CET1.png';
             break;
         case "AEST": newHours = 4; newMinutes = 30;
-        newBackgroundImage = '/Images/AEST1.jpg';
+        newBackgroundImage = 'Images/AEST1.jpg';
             break;
         case "JST": newHours = 3; newMinutes = 30;
-        newBackgroundImage = '/Images/JST1.png';
+        newBackgroundImage = 'Images/JST1.png';
             break;
 
         default: newHours = 0; newMinutes = 0;
-        newBackgroundImage = '/Images/IST1.png';
+        newBackgroundImage = 'Images/IST1.png';
             break;
     }
 
