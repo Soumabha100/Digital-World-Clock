@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital World Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="Title1">
+        <h1>World Clock</h1>
+    </div>
+    <div id="timeZone" class="fade"> 
+        Indian Standard Time
+    </div>
+    <div id="main_container">
+        <div id="clock">
+            00:00:00 AM <br>
+        </div>
+        <div id="date_year">
+             19 October, 2024
+        </div>
+        <div id="regionSelector">
+            <select id="citySelect" onchange="updateCity(),updateTimeZone()" >
+                <option value="IST">Indian Standard Time</option>
+                <option value="UTC">Coordinated Universal Time</option>
+                <option value="EST">Eastern Standard Time</option>
+                <option value="PST">Pacific Standard Time</option>
+                <option value="CET">Central European Time</option>
+                <option value="AEST">Australian Standard Time</option>
+                <option value="JST">Japan Standard Time</option>
+            </select>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
