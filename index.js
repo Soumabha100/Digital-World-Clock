@@ -90,12 +90,23 @@ function updateClock() {
     // Edge case to adjust merdidiem if hours overflow is true()
     if (hours >= 24) {
         hours -= 24;
-        meridiem = "AM";
+        if(hours >= 12){
+            meridiem = "PM"
+        }
+        else {
+            meridiem = "AM"
+        }
     }
     else if (hours < 0) {
         hours += 24;
-        meridiem = "PM";
+        if(hours >= 12){
+            meridiem = "PM"
+        }
+        else {
+            meridiem = "AM"
+        }
     }
+    console.log(hours);
 
     hours = hours % 12 || 12;
     hours = hours.toString().padStart(2, 0);
